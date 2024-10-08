@@ -1,34 +1,18 @@
-//Determine the Greatest Number Using Ternary Operator
-//Write a Java program to find the greatest number among three numbers 
-//using the ternary operator.
-//*Input: Three integer numbers from the user.
-//*Output: The greatest number among the three entered numbers.
-package module1;
-import java.util.Scanner;
-public class Assignment8 {
+public class StarPattern {
+    public static void main(String[] args) {
+        int rows = 5;
 
-	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
-		        
-		        System.out.print("Enter the first number: ");
-		        int num1 = scanner.nextInt();
-		        
-		        System.out.print("Enter the second number: ");
-		        int num2 = scanner.nextInt();
-		        
-		        System.out.print("Enter the third number: ");
-		        int num3 = scanner.nextInt();
-		        
-		        int greatest = (num1 >= num2 && num1 >= num3) ? num1 :
-		                       (num2 >= num1 && num2 >= num3) ? num2 : num3;
-		        
-		        System.out.println("The greatest number is: " + greatest);
-		        
-		       
-		    }
-		
-
-
-	}
-
+        for (int i = 0; i < rows; i++) {
+           
+            for (int j = 0; j < i; j++) {
+                System.out.print("  ");
+            }
+            // Print stars
+            for (int j = 0; j < rows - i; j++) {
+                System.out.print("* "); 
+            }
+            System.out.println(); 
+        }
+    }
+}
 
